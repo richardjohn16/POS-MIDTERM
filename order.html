@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+  <link rel="js" href="app.js">
+	
+	<title>POS SYSTEM</title>
+  </head>
+  <body>
+	<div class="container p-3">
+		<div class="row">
+		  <div class="col-md-9">
+			<div class="card">
+			  <div class="card-header">
+				<h1>Menu</h1>
+				<ul class="nav nav-pills card-header-pills">
+				  <li class="nav-item"><button type="button" class="nav-link disabled" id="coffeeLink">MILK TEA</button></li>
+				  <li class="nav-item"><button type="button" class="nav-link" id="foodLink">FRUIT TEA</button></li>
+				</ul>
+			  </div>
+			  <div class="card-body">
+				<div class="container" id="coffeeContainer">
+				  <div class="row">
+					<div class="col col-xl-3">
+					  <div class="card">
+						<img class="card-img-top" src="img/wintermelon.png" alt="Wintermelon">
+						<div class="card-body">
+						  <h2 class="card-title" id="prodName0">Wintermelon</h2>
+						  <form>
+							<select title="Drink Size" id="drinkSize0">
+							  <option value="medium">Medium : Php70</option>
+							  <option value="large">Large : Php90</option>
+							</select>
+							<input type="number" min="0" class="productQty" id="drinkAmt0" placeholder="0" value="1" onchange="checkInputValue()">
+							<div class="button-container">
+								<button type="button" class="btn btn-primary" id="addToOrderBtn" onclick="addToOrder()">Add to Order</button>
+							</div>
+						  </form>
+						</div>
+					  </div>
+					</div>
+					<div class="col col-xl-3">
+					  <div class="card">
+						<img class="card-img-top" src="img/caramel.png" alt="Caramel">
+						<div class="card-body">
+						  <h2 class="card-title" id="prodName1">Caramel</h2>
+						  <form>
+							<select title="Drink Size" id="drinkSize1">
+							  <option value="medium">Medium : Php70</option>
+							  <option value="large">Large : Php90</option>
+							</select>
+							<input type="number" min="0" class="productQty" id="drinkAmt1" placeholder="0" value="1">
+							<div class="button-container">
+								<button type="button" class="btn btn-primary" id="addToOrderBtn" onclick="addToOrder()">Add to Order</button>
+							</div>
+						  </form>
+						</div>
+					  </div>
+					</div>
+					<div class="col col-xl-3">
+					  <div class="card">
+						<img class="card-img-top" src="img/chocolate.png" alt="Chocolate">
+						<div class="card-body">
+						  <h2 class="card-title" id="prodName2">Chocolate</h2>
+						  <form>
+							<select title="Drink Size" id="drinkSize2">
+							  <option value="medium">Medium : Php70</option>
+							  <option value="large">Large : Php90</option>
+							</select>
+							<input type="number" min="0" class="productQty" id="drinkAmt2" placeholder="0" value="1">
+							<div class="button-container">
+								<button type="button" class="btn btn-primary" id="addToOrderBtn" onclick="addToOrder()">Add to Order</button>
+							</div>
+						  </form>
+						</div>
+					  </div>
+					</div>
+					<div class="col col-xl-3">
+					  <div class="card">
+						<img class="card-img-top" src="img/mocha.png" alt="Mocha">
+						<div class="card-body">
+						  <h2 class="card-title" id="prodName3">Mocha</h2>
+						  <form>
+							<select title="Drink Size" id="drinkSize3">
+							  <option value="medium">Medium : Php70</option>
+							  <option value="large">Large : Php90</option>
+							</select>
+							<input type="number" min="0" class="productQty" id="drinkAmt3" placeholder="0" value="1">
+							<div class="button-container">
+								<button type="button" class="btn btn-primary" id="addToOrderBtn" onclick="addToOrder()">Add to Order</button>
+							</div>
+						  </form>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				  <div class="mt-3 row">
+					<div class="col col-xl-3">
+					  <div class="card">
+						<img class="card-img-top" src="img/vanilla.png" alt="Vanilla">
+						<div class="card-body">
+						  <h2 class="card-title" id="prodName4">Vanilla</h2>
+						  <form>
+							<select title="Drink Size" id="drinkSize4">
+							  <option value="medium">Medium : Php70</option>
+							  <option value="large">Large : Php90</option>
+							</select>
+							<input type="number" min="0" class="productQty" id="drinkAmt4" placeholder="0" value="1">
+							<div class="button-container">
+								<button type="button" class="btn btn-primary" id="addToOrderBtn" onclick="addToOrder()">Add to Order</button>
+							</div>
+						  </form>
+						</div>
+					  </div>
+					</div>
+					<div class="col col-xl-3">
+					  <div class="card">
+						<img class="card-img-top" src="img/chocomatcha.png" alt="Choco Matcha">
+						<div class="card-body">
+						  <h2 class="card-title" id="prodName5">Choco Matcha</h2>
+						  <form>
+							<select title="Drink Size" id="drinkSize5">
+							  <option value="medium">Medium : Php70</option>
+							  <option value="large">Large : Php90</option>
+							</select>
+							<input type="number" min="0" class="productQty" id="drinkAmt5" placeholder="0" value="1">
+							<div class="button-container">
+								<button type="button" class="btn btn-primary" id="addToOrderBtn" onclick="addToOrder()">Add to Order</button>
+							</div>
+						  </form>
+						</div>
+					  </div>
+					</div>
+					<div class="col col-xl-3">
+					  <div class="card">
+						<img class="card-img-top" src="img/blackforest.png" alt="Black Forest">
+						<div class="card-body">
+						  <h2 class="card-title" id="prodName6">Black Forest</h2>
+						  <form>
+							<select title="Drink Size" id="drinkSize6">
+							  <option value="medium">Medium : Php70</option>
+							  <option value="large">Large : Php90</option>
+							</select>
+							<input type="number" min="0" class="productQty" id="drinkAmt6" placeholder="0" value="1">
+							<div class="button-container">
+								<button type="button" class="btn btn-primary" id="addToOrderBtn" onclick="addToOrder()">Add to Order</button>
+							</div>
+						  </form>
+						</div>
+					  </div>
+					</div>
+					<div class="col col-xl-3">
+                        <div class="card">
+                          <img class="card-img-top" src="img/tuttifrutti.png" alt="Tutti Frutti">
+                          <div class="card-body">
+                            <h2 class="card-title" id="prodName7">Tutti Frutti</h2>
+                            <form>
+                              <select title="Drink Size" id="drinkSize7">
+                                <option value="medium">Medium : Php70</option>
+                                <option value="large">Large : Php90</option>
+                              </select>
+                              <input type="number" min="0" class="productQty" id="drinkAmt7" placeholder="0" value="1">
+                              <div class="button-container">
+								<button type="button" class="btn btn-primary" id="addToOrderBtn" onclick="addToOrder()">Add to Order</button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+				  	</div>
+				  <div class="mt-3 row justify-content-around">
+					  <div class="col col-xl-4">
+						<div class="card">
+						  <img class="card-img-top" src="img/cnc.png" alt="Cookies and Cream">
+						  <div class="card-body">
+							<h2 class="card-title" id="prodName8">Cookies & Cream</h2>
+							<form>
+							  <select title="Drink Size" id="drinkSize8">
+								<option value="medium">Medium : Php70</option>
+								<option value="large">Large : Php90</option>
+							  </select>
+							  <input type="number" min="0" class="productQty" id="drinkAmt8" placeholder="0" value="1">
+							  <div class="button-container">
+								<button type="button" class="btn btn-primary" id="addToOrderBtn" onclick="addToOrder()">Add to Order</button>
+							  </div>
+							</form>
+						  </div>
+						</div>
+					  </div>
+				  </div>
+				</div>
+				<div class="d-none container" id="foodContainer">
+				  <div class="row">
+					<div class="col col-xl-3">
+					  <div class="card">
+						<img class="card-img-top" src="img/greenapple.png" alt="Green Apple">
+						<div class="card-body">
+						  <h2 class="card-title" id="prodName9">Green Apple</h2>
+						  <form>
+							<label for="foodAmt9"><h3>Php 80</h3></label>
+							<input type="number" min="0" class="productQty" id="foodAmt9" placeholder="0" value="1">
+							<div class="button-container">
+						      <submit class="btn btn-primary">Add to Order</submit>
+							</div>
+						  </form>
+						</div>
+					  </div>
+					</div>
+					<div class="col col-xl-3">
+					  <div class="card">
+						<img class="card-img-top" src="img/mango.jpg" alt="Mango">
+						<div class="card-body">
+						  <h2 class="card-title" id="prodName10">Mango</h2>
+						  <form>
+							<label for="foodAmt10"><h3>Php 85</h3></label>
+							<input type="number" min="0" class="productQty" id="foodAmt10" placeholder="0" value="1">
+							<div class="button-container">
+						      <submit class="btn btn-primary">Add to Order</submit>
+							</div>
+						  </form>
+						</div>
+					  </div>
+					</div>
+					<div class="col col-xl-3">
+					  <div class="card">
+						<img class="card-img-top" src="img/strawberry.png" alt="Strawberry">
+						<div class="card-body">
+						  <h2 class="card-title" id="prodName11">Strawberry</h2>
+						  <form>
+							<label for="foodAmt11"><h3>Php 100</h3></label>
+							<input type="number" min="0" class="productQty" id="foodAmt11" placeholder="0" value="1">
+							<div class="button-container">
+						      <submit class="btn btn-primary">Add to Order</submit>
+							</div>
+						  </form>
+						</div>
+					  </div>
+					</div>
+					<div class="col col-xl-3">
+					  <div class="card">
+						<img class="card-img-top" src="img/4season.png" alt="Four Season">
+						<div class="card-body">
+						  <h2 class="card-title" id="prodName12">Four Season</h2>
+						  <form>
+							<label for="foodAmt12"><h3>Php 75</h3></label>
+							<input type="number" min="0" class="productQty" id="foodAmt12" placeholder="0" value="1">
+							<div class="button-container">
+						      <submit class="btn btn-primary">Add to Order</submit>
+							</div>
+						  </form>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				  <div class="mt-3 row justify-content-around">
+					<div class="col col-xl-4">
+					  <div class="card">
+						<img class="card-img-top" src="img/lychee.png" alt="Lychee">
+						<div class="card-body">
+						  <h2 class="card-title" id="prodName13">Lychee</h2>
+						  <form>
+							<label for="foodAmt13"><h3>Php 85</h3></label>
+							<input type="number" min="0" class="productQty" id="foodAmt13" placeholder="0" value="1">
+							<div class="button-container">
+						      <submit class="btn btn-primary">Add to Order</submit>
+							</div>
+						  </form>
+						</div>
+					  </div>
+					</div>
+					<div class="col col-xl-4">
+					  <div class="card">
+						<img class="card-img-top" src="img/winterfruittea.png" alt="Wintermelon Fruit Tea">
+						<div class="card-body">
+						  <h2 class="card-title" id="prodName14">Wintermelon Fruit Tea</h2>
+						  <form>
+							<label for="foodAmt14"><h3>Php 95</h3></label>
+							<input type="number" min="0" class="productQty" id="foodAmt14" placeholder="0" value="1">
+							<div class="button-container">
+						      <submit class="btn btn-primary">Add to Order</submit>
+							  <submit class="btn btn-primary" id="end"></submit>
+							</div>
+						  </form>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</div>		
+			  </div>
+			</div>
+		  </div>
+		  <div class="col-md-3">
+			<div class="card">
+			  <div class="card-header">
+				<h1>Ordered Items</h1>
+			  </div>
+			  <div class="card-body">
+				<div class="overflow-auto">
+				</div>
+			  </div>
+			  <div class="card">
+				<div class="card-body">
+				  <form>
+					<label for="totalPay" id="priceLabel"><h1 id="totalPrice">Total:</h1></label>
+					<input type="number" min="0" id="totalPay" placeholder="Enter the amount here">
+					<div class="row" id="rrr">
+						<div class="col-4">
+							<button class="btn btn-primary btn-block" id="printReceipt">Print</button>
+						</div>
+						<div class="col-6">
+							<button class="btn btn-danger btn-block" id="removePreviousOrder">Clear</button>
+						</div>
+					</div>	
+					<div id="asdasd"> 
+						<button class="btn btn-success btn-block" id="pay">Pay</button>
+					</div>					
+				  </form>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	</div>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+	<script src="app.js"></script>
+ 
+  </body>
+</html>
