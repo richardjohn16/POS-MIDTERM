@@ -1,12 +1,16 @@
 body {
 	font-family: Tahoma;
-    background-image: url("bk.jpg");
+    background-image: url("img/galaxy1.jpg");
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
+    background-color: #000000;
 }
 
+.container{
+  backdrop-filter: blur(20px);
+}
 h1{
     font-size: 35px;
     font-weight: lighter;
@@ -22,6 +26,7 @@ img{
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
+    color: #000000;
 }
 
 
@@ -46,7 +51,7 @@ h2{
 }
 
 .nav-pills .nav-link.active {
-    color: #fff; 
+    color: #ffffff; 
     background-color: #007bff; 
 }
 
@@ -216,3 +221,16 @@ submit {
 .overflow-auto {
 	height: 600px;
 }
+
+@media (max-width: 200%) {
+    body {
+      font-size: 80%; /* Adjust the font size */
+    }
+    
+    h1 {
+      font-size: 30px; /* Adjust the heading font size */
+    }
+    
+    /* Add more styles as needed */
+  }
+
